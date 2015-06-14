@@ -1,0 +1,21 @@
+include ./includes/_slide
+
+doctype html
+html(lang="en")
+  include ./includes/_head
+  body
+    .reveal
+      .slides
+        +slide("Slide 1")
+          p These are the things in slide 1.
+        section
+          +slide("2.1")
+          +slide("2.2")
+        +slide("Slide 3")
+          p Do we need a third slide?
+
+
+    footer.slide-footer
+      span Powered by Lullabot
+
+  include ./includes/_closing
