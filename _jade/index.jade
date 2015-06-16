@@ -6,16 +6,24 @@ html(lang="en")
   body
     .reveal
       .slides
-        +slide("Slide 1")
-          p These are the things in slide 1.
         section
-          +slide("2.1")
-          +slide("2.2")
-        +slide("Slide 3")
-          p Do we need a third slide?
+          +header("Intro")
+          +slide("Pragmatic Site Building")
+            hr
+            h2 With Panels
+          +slide("Chris Albrecht")
+            hr
+            p chris@lullabot.com
+            p @ChrisAlbrecht
+            p drupal.org/u/KeyboardCowboy
+
+        section
+          +header("Section 2")
+          +slide("Slide 2.1")
+          +slide("Slide 2.2")
 
 
-    footer.slide-footer
-      span Powered by Lullabot
+      footer#preso-footer
+        span Powered by Lullabot
 
   include ./includes/_closing
