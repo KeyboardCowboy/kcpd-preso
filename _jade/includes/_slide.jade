@@ -1,7 +1,14 @@
+mixin group(title)
+  section
+    header.slide-header= title
+    block
+
 mixin slide(title)
   section
     h1= title
     block
 
-mixin header(text)
-  header.slide-header= text
+mixin code(lang)
+  pre
+    code(data-trim)
+      block

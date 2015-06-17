@@ -6,8 +6,7 @@ html(lang="en")
   body
     .reveal
       .slides
-        section
-          +header("Intro")
+        +group('1/Intro')
           +slide("Pragmatic Site Building")
             hr
             h2 With Panels
@@ -17,10 +16,46 @@ html(lang="en")
             p @ChrisAlbrecht
             p drupal.org/u/KeyboardCowboy
 
-        section
-          +header("Section 2")
-          +slide("Slide 2.1")
-          +slide("Slide 2.2")
+        +group('2/Local Install')
+          +slide("Local Server")
+            ul
+              li MAMP
+              li XAMPP
+          +slide("Create a DB")
+          +slide("Download & Install Drupal")
+
+        +group('3/Modules')
+          +slide("Drush")
+            ul
+              li Composer
+              li https://github.com/drush-ops/drush/releases
+          +slide('Admin Menu')
+            pre
+              code(data-trim)
+                $ drush dl admin_menu
+                $ drush en admin_menu
+          +slide('KC Panels Demo')
+            pre
+              code(data-trim)
+                $ drush dl kcpd
+                $ drush en kcpd
+
+        +group('4/Planning')
+          +slide('Content Discovery')
+          +slide('Design Discovery')
+          +slide('Architecture')
+            ul.fragment
+              li Pages
+              li Content Types
+              li Components
+              li Blocks
+              li Fields
+          +slide('Create a Page')
+            ul.fragment
+              li Node View
+              li Views Page Display
+              li Panels Page
+              li Custom Menu Callback
 
 
       footer#preso-footer
