@@ -6,17 +6,72 @@ html(lang="en")
   body
     .reveal
       .slides
-        +group('1/Intro')
+        // Intro
+        +group()
           +slide("Pragmatic Site Building")
             hr
             h2 With Panels
-          +slide("Chris Albrecht")
-            hr
-            p chris@lullabot.com
-            p @ChrisAlbrecht
-            p drupal.org/u/KeyboardCowboy
 
-        +group('2/Local Install')
+          section
+            h1
+              img(data-src="images/lullabot_128.png").plain
+              | Lullabot
+            img(data-src="images/lullabot.jpg")
+            p.fragment.fade-in Strategy // Design // Development
+            small.fragment.fade-in By integrating strategy, design, and development we produce better products and create more delightful experiences. You save money and launch faster.
+
+          +slide("Chris Albrecht")
+            small.highlight Developer // Technical PM
+            hr
+            ul.none
+              li
+                img(src="images/icons/SVG/mail.svg").icon
+                | chris@lullabot.com
+              li
+                img(src="images/icons/SVG/twitter.svg").icon
+                | @ChrisAlbrecht
+              li
+                img(src="images/icons/SVG/drupal.svg").icon
+                | drupal.org/u/KeyboardCowboy
+
+        // Overview
+        +group('Overview')
+          +slide('Concept')
+            p Use One Method per Task
+
+          +slide('Create a Page')
+            ul.fragment
+              li Node View
+              li Views Page Display
+              li Panels Page
+              li Custom Menu Callback
+
+          +slide('With Panels')
+            ul
+              li.fragment All Pages in One Interface
+              li.fragment Contextual Information
+              li.fragment Access Control
+              li.fragment Complex Relationships
+              li.fragment Reusable Layouts
+              li.fragment Large Family of Modules
+
+          +slide('Take Aways')
+            ul
+              li.fragment Method for Architecting Your Site
+              li.fragment Understanding of the Panels Family
+              li.fragment Views Content Panes
+              li.fragment Custom Layouts
+              li.fragment Panels IPE
+
+          +slide('Extras')
+            ul
+              li.fragment Beans
+              li.fragment Panelizer
+              li.fragment Fieldable Panels Panes
+              li.fragment Tips & Tricks
+
+        // Local setup
+        +group('Local Install')
           +slide("Local Server")
             ul
               li MAMP
@@ -24,23 +79,25 @@ html(lang="en")
           +slide("Create a DB")
           +slide("Download & Install Drupal")
 
-        +group('3/Modules')
+        // Install Modules
+        +group('Modules')
           +slide("Drush")
             ul
               li Composer
               li https://github.com/drush-ops/drush/releases
           +slide('Admin Menu')
             pre
-              code(data-trim)
+              code(data-trim).
                 $ drush dl admin_menu
                 $ drush en admin_menu
           +slide('KC Panels Demo')
             pre
-              code(data-trim)
+              code(data-trim).
                 $ drush dl kcpd
                 $ drush en kcpd
 
-        +group('4/Planning')
+        // Content Planning
+        +group('Planning')
           +slide('Content Discovery')
           +slide('Design Discovery')
           +slide('Architecture')
@@ -50,12 +107,55 @@ html(lang="en")
               li Components
               li Blocks
               li Fields
-          +slide('Create a Page')
-            ul.fragment
-              li Node View
-              li Views Page Display
-              li Panels Page
-              li Custom Menu Callback
+
+        +group("Panels")
+          +slide('Dive In!')
+          +slide('Page Manager')
+          +slide
+            .left
+              h3 Renderers
+              p Allow panels to intercept and override a path's display.
+            .left.fragment
+              h3 Custom Pages
+              p Are panels pages such as the home page or custom landing pages.
+            .left.fragment
+              h3 Variants
+              p Are ways for a renderer to display content in a layout.
+
+          +slide('Inside Panels')
+          +slide
+            .left
+              h3 Selection Rules
+              p Determine which variant is selected, top down.
+            .left.fragment
+              h3 Contexts
+              p Expose and relate contextual data to the panels system.
+            .left.fragment
+              h3 Layout
+              p Select a page layout for this variant.
+            .left.fragment
+              h3 Content
+              p Add a variety of content to the variant.
+
+          +slide('Try it Out!')
+          +slide
+            ol.big
+              li Enable the "node view" renderer and edit it.
+              li.fragment Add a variant.
+              li.fragment Create a selection rule for a node type.
+              li.fragment Choose a layout.
+              li.fragment Add fields from the node to the content.
+
+        +group('Views Content Panes')
+          +slide('Enable')
+            ul.big
+              li.fragment Views
+              li.fragment Views Content Panes (Under CTools)
+          +slide('Create a New View')
+            ol.big
+              li.fragment View of content, movies
+              li.fragment No block or page
+              li.fragment Continue & Edit
 
 
       footer#preso-footer
