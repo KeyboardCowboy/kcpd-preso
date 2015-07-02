@@ -108,6 +108,7 @@ html(lang="en")
               li Blocks
               li Fields
 
+        // Panels Overview
         +group("Panels")
           +slide('Dive In!')
           +slide('Page Manager')
@@ -122,6 +123,7 @@ html(lang="en")
               h3 Variants
               p Are ways for a renderer to display content in a layout.
 
+          // Inside Panels
           +slide('Inside Panels')
           +slide
             .left
@@ -137,15 +139,17 @@ html(lang="en")
               h3 Content
               p Add a variety of content to the variant.
 
+          // Configure a node variant
           +slide('Try it Out!')
           +slide
             ol.big
               li Enable the "node view" renderer and edit it.
               li.fragment Add a variant.
-              li.fragment Create a selection rule for a node type.
+              li.fragment Create a selection rule for movies.
               li.fragment Choose a layout.
               li.fragment Add fields from the node to the content.
 
+        // Build a VCP View
         +group('Views Content Panes')
           +slide('Enable')
             ul.big
@@ -153,9 +157,17 @@ html(lang="en")
               li.fragment Views Content Panes (Under CTools)
           +slide('Create a New View')
             ol.big
-              li.fragment View of content, movies
+              li.fragment View of content, Movie Reviews
               li.fragment No block or page
               li.fragment Continue & Edit
+          +slide
+            ol.big
+              li Add a display of type Content Pane
+              li.fragment Set a contextual filter relating to movies
+              li.fragment Set the Pane argument input to From Context, Content ID (under Node)
+              li.fragment Save
+              li.fragment Open panels UI, then Content
+              li.fragment From View Panes, add the new pane
 
 
       footer#preso-footer
